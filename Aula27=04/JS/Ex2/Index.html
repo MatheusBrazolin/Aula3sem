@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="contas">
+<head>
+    <script src="./angular.js"></script>
+    <script>
+        //Criação do app
+        var app = angular.module("contas", []);
+        //Criação do controller
+       app.controller("OpController", function ($scope) {
+            $scope.tarefa = "Vamos fazer contas.";
+            $scope.termo1 = 1;
+            $scope.termo2 = 2;
+        });
+    </script>
+</head>
+<body>
+    <div ng-controller='OpController'>
+    <h1>O que vamos fazer?</h1>
+    <h2>{{tarefa}}</h2>
+    <p>soma:{{termo1}} + {{termo2}} = {{termo1 + termo2}}</p>
+    <p>subitração:{{termo1}} - {{termo2}} = {{termo1 - termo2}}</p>
+    <p>Multiplicação:{{termo1}} * {{termo2}} = {{termo1 * termo2}}</p>
+    <p>Divisão:{{termo1}} / {{termo2}} = {{termo1 / termo2}}</p>
+    </div>
+</body>
+</html>

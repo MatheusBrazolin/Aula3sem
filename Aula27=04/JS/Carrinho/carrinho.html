@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app='carrinhoApp'>
+<head>
+    <title>Seu Carrinho de compras</title>
+    <script src="./angular.js"></script>
+    <script src="./controller_carrinho.js"></script>
+</head>
+<body ng-controller='CarrinhoController'>
+    <h1>Seu Pedido</h1>
+    <div ng-repeat='item in items'>
+        <p>{{item.nome}}</p>
+        <input ng-model='item.quantidade'>
+        <p>{{item.preco | currency}}</p>
+        <p>item.preco * item.quantidade | currency</p>
+        <button  ng-click="remove($index)">Remove</button>
+        <hr>
+    </div>
+    
+</body>
+</html>
